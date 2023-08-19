@@ -1,0 +1,24 @@
+/* font For full website */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+	:root {
+		padding: 0;
+		margin: 0;
+		/* colors */
+		--green-primary: "#559E44";
+		--red-primary: "#DB2D1C";
+		--blue-primary: "#397BC2";
+		--yellow-primary: "#E76932";
+		--mint-green: "#CFEAE3";
+		/* screens */
+		--large-screen: 1440px;
+		--medium-screen: 1200px;
+		--small-screen: 640px;
+	}
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+}

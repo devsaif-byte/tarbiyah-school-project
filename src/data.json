@@ -1,0 +1,74 @@
+{
+	"heroContent": {
+		"title": "Tarbiyah Ideal School",
+		"subtitle": "Responsible to the Ummah."
+	},
+	"about": {
+		"title": "About our school",
+		"description": "We don’t just give students an education and experiences that set them up for success in a career. We help them succeed in their career—to discover a field they’re passionate about and dare to lead it. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere.",
+		"social": {
+			"Facebook": "",
+			"linkedin": "",
+			"youtube": ""
+		}
+	},
+	"notice": [
+		{
+			"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ..."
+		}
+	],
+	"ourFacilities": [
+		{
+			"title": "HOW YOUR CHILD CAN MAKE A DEEPER CONNECTION WITH THE QURAN",
+			"description": "Through Islamic Foundation School’s Sacred Link: Iqra program, your child can read or memorize the Quran with correct tajweed, learn about concepts in the Quran, and develop Islamic character. ..."
+		},
+		{
+			"title": "Special Features",
+			"points": {
+				"1": "An Excellent combination of Hifzul Quran and School (English Version)",
+				"2": "Digital Class Room with all modern facilities",
+				"3": "Online and Offline profile for each student",
+				"4": "Activity based and proper illustration based teaching method",
+				"5": "Participation in different national and international competitions, online and TV programs.",
+				"6": "Highly secured (CCTV Based monitoring for 24/7)",
+				"7": "Regular medical checkup with psychological support",
+				"8": "Stress free education system",
+				"9": "Special focus on ethics, culture and Islamic Sharia",
+				"10": "Own studio for video and audio recording with top notch technologies"
+			}
+		},
+		{
+			"title": "Academics",
+			"description": "School of child development offers education from pre-school to class five of a global standard. It offers both English Version and Hifzul Quran. ..."
+		}
+	],
+	"events": [{}],
+	"teachers": [
+		{
+			"image": "../images/teacher-1.jpg",
+			"name": "Aisha Ahmed",
+			"title": "Arabic Teacher"
+		},
+		{
+			"image": "../images/teacher-2.jpg",
+			"name": "John Smith",
+			"title": "Bangla Teacher"
+		},
+		{
+			"image": "../images/teacher-3.jpg",
+			"name": "Lorem Ipsum",
+			"title": "Hadith Teacher"
+		},
+		{
+			"image": "../images/teacher-4.jpg",
+			"name": "John Doe",
+			"title": "Math Teacher"
+		}
+	],
+	"contact": {
+		"email": "schoolofchilddevelopment@gmail.com",
+		"phone1": "+8801741792606",
+		"phone2": "+1123456789",
+		"location": "South Banasree, Dhaka"
+	}
+}
