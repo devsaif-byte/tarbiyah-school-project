@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // Initialization for ES Users
 // import "./Navbar.css";
 import logo from "/src/images/tarbiyah_logo.jpg";
@@ -6,7 +6,43 @@ import { Link, NavLink } from "react-router-dom";
 import WhiteButton from "../Buttons/WhiteButton";
 
 const Navbar = () => {
+	
+	const [show, setShow] = useState("top");
+	const [lastScrollY, setLastScrollY] = useState(0);
+	const [mobileMenu, setMobileMenu] = useState(false);
 	const [isDropdownOpen, setDropdown] = useState(false);
+
+	const controlNavbar = () => {
+		if (window.scrollY > 200) {
+			if (window.scrollY > lastScrollY && !mobileMenu) {
+				setShow("hide");
+			} else {
+				setShow("show");
+			}
+		} else {
+			setShow("top");
+		}
+		setLastScrollY(window.scrollY);
+	};
+
+
+	useEffect(() => {
+		window.addEventListener("scroll", controlNavbar);
+		return () => window.removeEventListener("scroll", controlNavbar);
+	}, [lastScrollY]);
+
+
+	const openSearch = () => {
+		setMobileMenu(false);
+		setShowSearch(true);
+	};
+
+	const openMobileMenu = () => {
+		setMobileMenu(true);
+		setShowSearch(false);
+	};
+
+
 	const toggleDropdown = () => {
 		setDropdown(!isDropdownOpen);
 	};
@@ -42,10 +78,10 @@ const Navbar = () => {
 												to=""
 												className="inline-flex w-full justify-center gap-x-1.5 text-gray-300  hover:text-white px-3 py-2 rounded-md text-sm font-medium"
 												id="menu-button"
-												aria-expanded={toggleDropdown}
+												aria-expanded={false}
 												aria-haspopup="true"
-												onClick={toggleDropdown}
-												// onMouseOver={toggleDropdown}
+												// onClick={toggleDropdown}
+												onMouseOver={toggleDropdown}
 											>
 												Academics
 												<svg
@@ -139,7 +175,7 @@ const Navbar = () => {
 						</div>
 					</div>
 				</div>
-				<div className="md:hidden">
+				<div className="hidden" onClick={(e)=> {console.log(e)}}>
 					<div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 						<NavLink
 							className="text-gray-300 hover:text-white  block px-3 py-2 rounded-md text-base font-medium"
