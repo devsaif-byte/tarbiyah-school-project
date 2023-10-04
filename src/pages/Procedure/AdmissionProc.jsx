@@ -4,7 +4,7 @@ const AdmissionProc = () => {
 	return (
 		<>
 			{/* Container for demo purpose */}
-			<div className="container my-24 mx-auto md:px-6">
+			<div className="container my-24 text-left md:px-6">
 				{/* Section: Design Block */}
 				<section className="mb-32">
 					<h1 className="mb-4 text-3xl font-bold">ভর্তি প্রক্রিয়া</h1>

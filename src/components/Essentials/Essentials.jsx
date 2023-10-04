@@ -1,5 +1,6 @@
 import React from "react";
 import RedButton from "../Buttons/RedButton";
+import { Button } from "@material-tailwind/react";
 
 const Essentials = () => {
 	return (
@@ -29,7 +30,7 @@ const Essentials = () => {
 								placerat vulputate. Ut vulputate est non quam dignissim
 								elementum. Donec a ullamcorper diam.
 							</p>
-							<RedButton text="Learn More" to="/academic-schedule" />
+							<Button children="Learn More" to="/academic-schedule" />
 						</div>
 						<div className="mb-6 lg:mb-0">
 							<div
@@ -50,7 +51,7 @@ const Essentials = () => {
 								orci, nec ornare metus semper sed. Integer volutpat ornare erat
 								sit amet rutrum.
 							</p>
-							<RedButton text="Learn More" to="/admission-procedure" />
+							<Button children="Learn More" to="/admission-procedure" />
 						</div>
 						<div className="mb-0">
 							<div>
@@ -72,7 +73,7 @@ const Essentials = () => {
 									arcu, non vehicula nisl dui quis diam. Mauris ut risus eget
 									massa volutpat feugiat. Donec.
 								</p>
-								<RedButton text="Learn More" />
+								<Button children="Learn More"  />
 							</div>
 						</div>
 					</div>

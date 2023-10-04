@@ -1,213 +1,267 @@
-import React, { useEffect, useState } from "react";
-// Initialization for ES Users
-// import "./Navbar.css";
+import React from "react";
+import {
+  Navbar,
+  Collapse,
+  Typography,
+  Button,
+  IconButton,
+  List,
+  ListItem,
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Chip,
+} from "@material-tailwind/react";
+import {
+  ChevronDownIcon,
+  UserCircleIcon,
+  CubeTransparentIcon,
+  Bars3Icon,
+  XMarkIcon,
+  FlagIcon,
+  ChatBubbleOvalLeftIcon,
+  UsersIcon,
+  FolderIcon,
+  Square3Stack3DIcon,
+  RocketLaunchIcon,
+  FaceSmileIcon,
+  PuzzlePieceIcon,
+  GiftIcon,
+} from "@heroicons/react/24/outline";
 import logo from "/src/images/tarbiyah_logo.jpg";
 import { Link, NavLink } from "react-router-dom";
-import WhiteButton from "../Buttons/WhiteButton";
-
-const Navbar = () => {
-	
-	const [show, setShow] = useState("top");
-	const [lastScrollY, setLastScrollY] = useState(0);
-	const [mobileMenu, setMobileMenu] = useState(false);
-	const [isDropdownOpen, setDropdown] = useState(false);
-
-	const controlNavbar = () => {
-		if (window.scrollY > 200) {
-			if (window.scrollY > lastScrollY && !mobileMenu) {
-				setShow("hide");
-			} else {
-				setShow("show");
-			}
-		} else {
-			setShow("top");
-		}
-		setLastScrollY(window.scrollY);
-	};
-
-
-	useEffect(() => {
-		window.addEventListener("scroll", controlNavbar);
-		return () => window.removeEventListener("scroll", controlNavbar);
-	}, [lastScrollY]);
-
-
-	const openSearch = () => {
-		setMobileMenu(false);
-		setShowSearch(true);
-	};
-
-	const openMobileMenu = () => {
-		setMobileMenu(true);
-		setShowSearch(false);
-	};
-
-
-	const toggleDropdown = () => {
-		setDropdown(!isDropdownOpen);
-	};
-	return (
-		<>
-			{/* Navbar Start */}
-			<nav className="bg-rose-800 ">
-				<div className="px-8 mx-auto max-w-7xl">
-					<div className="flex items-center justify-between h-16">
-						<div className="w-full justify-between flex items-center">
-							<NavLink className="flex-shrink-0" to="/">
-								<img className="w-16 h-16" src={logo} alt="Workflow" />
-							</NavLink>
-							<div className="hidden md:block">
-								<div className="flex items-baseline ml-10 space-x-4">
-									<NavLink
-										className="text-gray-300  hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-										to="/"
-									>
-										Home
-									</NavLink>
-									<NavLink
-										className="text-gray-300  hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-										to="/about"
-									>
-										About us
-									</NavLink>
-
-									{/* <NavLink className="text-gray-300  hover:text-white px-3 py-2 rounded-md text-sm font-medium"></NavLink> */}
-									<div className="relative inline-block text-left">
-										<div>
-											<Link
-												to=""
-												className="inline-flex w-full justify-center gap-x-1.5 text-gray-300  hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-												id="menu-button"
-												aria-expanded={false}
-												aria-haspopup="true"
-												// onClick={toggleDropdown}
-												onMouseOver={toggleDropdown}
-											>
-												Academics
-												<svg
-													className="-mr-1 h-5 w-5 text-gray-300"
-													viewBox="0 0 20 20"
-													fill="currentColor"
-													aria-hidden="true"
-												>
-													<path
-														fillRule="evenodd"
-														d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-														clipRule="evenodd"
-													/>
-												</svg>
-											</Link>
-										</div>
-										{/*
-												Dropdown menu, show/hide based on menu state.
-
-												Entering: "transition ease-out duration-100"
-												From: "transform opacity-0 scale-95"
-												To: "transform opacity-100 scale-100"
-												Leaving: "transition ease-in duration-75"
-												From: "transform opacity-100 scale-100"
-												To: "transform opacity-0 scale-95"
-										*/}
-										{isDropdownOpen && (
-											<div
-												className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition ease-out duration-300 "
-												role="menu"
-												aria-orientation="vertical"
-												aria-labelledby="menu-button"
-												tabIndex={-1}
-											>
-												<div className="py-1" role="none">
-													{/* Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" */}
-													<Link
-														to="/programs"
-														className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200"
-														role="menuitem"
-														tabIndex={-1}
-														id="menu-item-0"
-													>
-														Programs
-													</Link>
-													<Link
-														to="/parents"
-														className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200"
-														role="menuitem"
-														tabIndex={-1}
-														id="menu-item-1"
-													>
-														Parents
-													</Link>
-												</div>
-											</div>
-										)}
-									</div>
-									<NavLink
-										className="text-gray-300  hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-										to="/gallery"
-									>
-										Gallery
-									</NavLink>
-
-									<NavLink
-										className="text-gray-300  hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-										to="/contact"
-									>
-										Contact
-									</NavLink>
-								</div>
-							</div>
-						</div>
-						<div className="block">
-							<div className="flex items-center ml-4 md:ml-6"></div>
-						</div>
-						<div className="flex -mr-2 md:hidden">
-							<button className="text-gray-800  hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
-								<svg
-									width={20}
-									height={20}
-									fill="currentColor"
-									className="w-8 h-8"
-									viewBox="0 0 1792 1792"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"></path>
-								</svg>
-							</button>
-						</div>
-					</div>
-				</div>
-				<div className="hidden" onClick={(e)=> {console.log(e)}}>
-					<div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-						<NavLink
-							className="text-gray-300 hover:text-white  block px-3 py-2 rounded-md text-base font-medium"
-							to="/#"
-						>
-							Home
-						</NavLink>
-						<NavLink
-							className="text-gray-800  block px-3 py-2 rounded-md text-base font-medium"
-							to="/#"
-						>
-							Gallery
-						</NavLink>
-						<NavLink
-							className="text-gray-300 hover:text-white  block px-3 py-2 rounded-md text-base font-medium"
-							to="/#"
-						>
-							Content
-						</NavLink>
-						<NavLink
-							className="text-gray-300 hover:text-white  block px-3 py-2 rounded-md text-base font-medium"
-							to="/#"
-						>
-							Contact
-						</NavLink>
-					</div>
-				</div>
-			</nav>
-
-			{/* Navbar End */}
-		</>
-	);
+const colors = {
+  blue: "bg-blue-50 text-blue-500",
+  orange: "bg-orange-50 text-orange-500",
+  green: "bg-green-50 text-green-500",
+  "blue-gray": "bg-blue-gray-50 text-blue-gray-500",
+  purple: "bg-purple-50 text-purple-500",
+  teal: "bg-teal-50 text-teal-500",
+  cyan: "bg-cyan-50 text-cyan-500",
+  pink: "bg-pink-50 text-pink-500",
 };
 
-export default Navbar;
+const navListMenuItems = [
+  {
+    color: "blue-gray",
+    icon: FolderIcon,
+    title: "Admission Guid",
+    link: "/admission-procedure",
+    description: "Learn all the stuff of admission procedure.",
+  },
+  {
+    color: "blue",
+    icon: FlagIcon,
+    title: "Programs",
+    link: "/programs",
+    description: "Know more about our programs and missions.",
+  },
+  {
+    color: "purple",
+    icon: RocketLaunchIcon,
+    title: "Photo Gallery",
+    link: "/gallery",
+    description: "Checkout our products that helps a startup running.",
+  },
+  {
+    color: "teal",
+    icon: FaceSmileIcon,
+    title: "Icons",
+    description: "Set of beautiful icons that you can use in your project.",
+  },
+  {
+    color: "cyan",
+    icon: PuzzlePieceIcon,
+    title: "UI Kits",
+    description: "High quality UI Kits helps you to 2x faster.",
+  },
+  {
+    color: "pink",
+    icon: GiftIcon,
+    title: "Open Source",
+    description: "List of all our open-source projects, it's all free.",
+  },
+];
+
+function NavListMenu() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
+  const renderItems = navListMenuItems.map(
+    ({ icon, title, description, color, link }, key) => (
+      <NavLink to={link} key={key}>
+        <MenuItem className="flex items-center gap-3 rounded-lg">
+          <div className={`rounded-lg p-5 ${colors[color]}`}>
+            {React.createElement(icon, {
+              strokeWidth: 2,
+              className: "h-6 w-6 ",
+            })}
+          </div>
+          <div>
+            <Typography
+              variant="h6"
+              color="blue-gray"
+              className="flex items-center text-sm"
+            >
+              {title}
+            </Typography>
+            <Typography variant="small" color="gray" className="font-normal">
+              {description}
+            </Typography>
+          </div>
+        </MenuItem>
+      </NavLink>
+    )
+  );
+
+  return (
+    <React.Fragment>
+      <Menu
+        open={isMenuOpen}
+        handler={setIsMenuOpen}
+        offset={{ mainAxis: 20 }}
+        placement="bottom"
+        allowHover={true}
+      >
+        <MenuHandler>
+          <Typography as="div" variant="small" className="font-normal">
+            <ListItem
+              className="flex items-center gap-2 py-2 pr-4"
+              selected={isMenuOpen || isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+            >
+              <Square3Stack3DIcon className="h-[18px] w-[18px]" />
+              Academics & Info
+              <ChevronDownIcon
+                strokeWidth={2.5}
+                className={`hidden h-3 w-3 transition-transform lg:block ${
+                  isMenuOpen ? "rotate-180" : ""
+                }`}
+              />
+              <ChevronDownIcon
+                strokeWidth={2.5}
+                className={`block h-3 w-3 transition-transform lg:hidden ${
+                  isMobileMenuOpen ? "rotate-180" : ""
+                }`}
+              />
+            </ListItem>
+          </Typography>
+        </MenuHandler>
+        <MenuList className="hidden max-w-screen-xl lg:block rounded-none">
+          <ul className="grid grid-cols-4 gap-y-2">{renderItems}</ul>
+        </MenuList>
+      </Menu>
+      <div className="block lg:hidden">
+        <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
+      </div>
+    </React.Fragment>
+  );
+}
+
+function NavList() {
+  return (
+    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-normal"
+      >
+        <NavLink to="/notice">
+          <ListItem className="flex items-center gap-2 py-2 pr-4">
+            <CubeTransparentIcon className="h-[18px] w-[18px]" />
+            Notice
+          </ListItem>
+        </NavLink>
+      </Typography>
+      <NavListMenu />
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-normal"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          <UserCircleIcon className="h-[18px] w-[18px]" />
+          Account
+        </ListItem>
+      </Typography>
+    </List>
+  );
+}
+
+export function NavbarWithMegaMenu() {
+  const [openNav, setOpenNav] = React.useState(false);
+
+  React.useEffect(() => {
+    window.addEventListener(
+      "resize",
+      () => window.innerWidth >= 960 && setOpenNav(false)
+    );
+  }, []);
+
+  return (
+    <div className="bg-white">
+      <Navbar className="mx-auto px-4 p-0 rounded-none shadow-none backdrop-saturate-none backdrop-blur-none bg-opacity-80 border-none">
+        <div className="flex items-center justify-between text-blue-gray-900">
+          <Typography
+            as="a"
+            href="#"
+            variant="h6"
+            className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+          >
+            <div className="flex items-center">
+              <img
+                className="h-24 w-24 rounded-full object-fill object-center"
+                src={logo}
+                alt="logo"
+              />
+              <h1 className="text-xl text-redPrimary">Tarbiyah Ideal School</h1>
+            </div>
+          </Typography>
+          <div className="hidden lg:block">
+            <NavList />
+          </div>
+          <div className="hidden gap-2 lg:flex">
+            <Link to='/contact'>
+            
+            <Button
+              size="lg"
+              variant="filled"
+              className="rounded-full text-white bg-redPrimary"
+              >
+              Contact
+            </Button>
+              </Link>
+          </div>
+          <IconButton
+            variant="text"
+            color="blue-gray"
+            className="lg:hidden"
+            onClick={() => setOpenNav(!openNav)}
+          >
+            {openNav ? (
+              <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+            ) : (
+              <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+            )}
+          </IconButton>
+        </div>
+        <Collapse open={openNav}>
+          <NavList />
+          <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+            <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
+              Sign In
+            </Button>
+            <Button variant="gradient" size="sm" fullWidth>
+              Sign Up
+            </Button>
+          </div>
+        </Collapse>
+      </Navbar>
+    </div>
+  );
+}

@@ -4,7 +4,7 @@ const About = () => {
 	return (
 		<>
 			{/* Container for demo purpose */}
-			<div className="container my-24 mx-auto md:px-6">
+			<div className="container flex justify-center items-center md:px-6">
 				{/* Section: Design Block */}
 				<section className="mb-32">
 					<h1 className="mb-4 text-3xl font-bold">আমাদের কথা</h1>
@@ -52,13 +52,7 @@ const About = () => {
 						className="mb-6 w-full"
 						alt=""
 					/>
-					{/* <ul className="mb-6 list-inside list-disc">
-						<li>Lorem</li>
-						<li>Ipsum</li>
-						<li>Dolor</li>
-						<li>Sit</li>
-						<li>Amet</li>
-					</ul> */}
+					
 					<p>
 						আপনারা জেনে আনন্দিত হবেন যে, আপনার সন্তানের যথাযথ বিকাশ ও শিক্ষা
 						প্রদানের নিমিত্তে প্রতিষ্ঠিত হয়েছে ভিন্ন ধারার শিক্ষা প্রতিষ্ঠান

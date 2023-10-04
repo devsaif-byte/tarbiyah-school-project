@@ -1,10 +1,14 @@
+const withMT = require("@material-tailwind/react/utils/withMT");
+
 /** @type {import('tailwindcss').Config} */
-export default {
+
+export default withMT({
 	content: [
 		"./index.html",
 		"./src/**/*.{js,ts,jsx,tsx}",
-		// "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
 		"./node_modules/tw-elements/dist/js/**/*.js",
+		"path-to-your-node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
+		"path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
 		container: {
@@ -15,17 +19,17 @@ export default {
 			colors: {
 				/* colors */
 				greenPrimary: "#559E44",
-				redPrimary: "#DB2D1C",
+				redPrimary: "#BA131A",
 				bluePrimary: "#397BC2",
-				yellowPrimary: "#E76932",
-				mintGreen: "#f7f7f7",
+				yellowPrimary: "#FAD008",
+				mintGreen: "#D0EBE4",
+				orangePrimary: "#EA632C"
 			},
 		},
 	},
 	plugins: [
 		require("@tailwindcss/typography"),
 		require("tw-elements/dist/plugin.cjs"),
-		// require("flowbite/plugin"),
 	],
 	// darkMode: "class",
-};
+});
