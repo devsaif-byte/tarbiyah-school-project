@@ -4,12 +4,12 @@ const Contact = () => {
   return (
     <>
       {/* Container for demo purpose */}
-      <div className="py-24 mx-auto md:px-6 bg-mintGreen">
-        <h2 className="mb-12 text-center text-3xl font-bold">Contact Us</h2>
+      <div className="py-24 mx-auto md:px-6 bg-gray-100">
+        <h2 className="mb-12 text-center text-3xl font-bold">Get In Touch</h2>
         {/* Section: Design Block */}
-        <section className="container">
+        <section className="container bg-white">
           <div className="block">
-            <div className="flex flex-wrap items-center">
+            <div className="flex flex-wrap items-center shadow-md">
               <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
                 <div style={{ width: "100%" }}>
                   <iframe

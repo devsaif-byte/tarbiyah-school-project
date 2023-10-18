@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 function NavList() {
   return (
-    <ul className="my-2 py-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
+    <ul className="my-2 py-2 flex flex-row gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
       <Link to="https://www.facebook.com/TarbiyahIdealSchool" target="blank">
         <IconButton
           variant="gradiant"
@@ -83,7 +83,7 @@ export function AddressNav() {
   }, []);
 
   return (
-    <div className="bg-greenPrimary">
+    <div className="bg-mintGreen">
       <Navbar
         color="inherite"
         className="w-full mx-auto  px-6 py-0 rounded-none shadow-none backdrop-saturate-none backdrop-blur-none bg-opacity-0 border-none"

@@ -28,6 +28,10 @@ import {
   FaceSmileIcon,
   PuzzlePieceIcon,
   GiftIcon,
+  HomeIcon,
+  AcademicCapIcon,
+  BellAlertIcon,
+  PhotoIcon,
 } from "@heroicons/react/24/outline";
 import logo from "/src/images/tarbiyah_logo.jpg";
 import { Link, NavLink } from "react-router-dom";
@@ -59,7 +63,7 @@ const navListMenuItems = [
   },
   {
     color: "purple",
-    icon: RocketLaunchIcon,
+    icon: PhotoIcon,
     title: "Photo Gallery",
     link: "/gallery",
     description: "Checkout our products that helps a startup running.",
@@ -91,22 +95,21 @@ function NavListMenu() {
   const renderItems = navListMenuItems.map(
     ({ icon, title, description, color, link }, key) => (
       <NavLink to={link} key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg">
-          <div className={`rounded-lg p-5 ${colors[color]}`}>
+        <MenuItem className="flex items-center gap-3 rounded-none hover:bg-teal-300">
+          <div className={`rounded-none p-5  ${colors[color]}`}>
             {React.createElement(icon, {
               strokeWidth: 2,
               className: "h-6 w-6 ",
             })}
           </div>
-          <div>
+          <div >
             <Typography
               variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm"
+              className="flex items-center text-sm "
             >
               {title}
             </Typography>
-            <Typography variant="small" color="gray" className="font-normal">
+            <Typography variant="small" color="gray" className="font-normal ">
               {description}
             </Typography>
           </div>
@@ -127,12 +130,12 @@ function NavListMenu() {
         <MenuHandler>
           <Typography as="div" variant="small" className="font-normal">
             <ListItem
-              className="flex items-center gap-2 py-2 pr-4"
+              className="flex items-center gap-2 py-2 pr-4 rounded-none hover:bg-mintGreen hover:text-white"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
-              <Square3Stack3DIcon className="h-[18px] w-[18px]" />
-              Academics & Info
+              <AcademicCapIcon className="h-[18px] w-[18px]" />
+              Academics
               <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -165,30 +168,47 @@ function NavList() {
       <Typography
         as="a"
         href="#"
-        variant="small"
-        color="blue-gray"
+        variant="medium"
+        // color="blue-gray"
+        className="font-normal rounded-none "
+      >
+        <NavLink to="/wellcome">
+          <ListItem className="flex items-center gap-2 py-2 pr-4 rounded-none hover:bg-mintGreen hover:text-white">
+            <HomeIcon className="h-[18px] w-[18px]" />
+            Home
+          </ListItem>
+        </NavLink>
+      </Typography>
+      <Typography
+        as="a"
+        href="#"
+        variant="medium"
+        // color="blue-gray"
+        className="font-normal rounded-none "
+      >
+        <NavLink to="/about">
+          <ListItem className="flex items-center gap-2 py-2 pr-4 rounded-none hover:bg-mintGreen hover:text-white">
+            <UsersIcon className="h-[18px] w-[18px]" />
+            About Us
+          </ListItem>
+        </NavLink>
+      </Typography>
+      <Typography
+        as="a"
+        href="#"
+        variant="medium"
+        // color="blue-gray"
         className="font-normal"
       >
         <NavLink to="/notice">
-          <ListItem className="flex items-center gap-2 py-2 pr-4">
-            <CubeTransparentIcon className="h-[18px] w-[18px]" />
+          <ListItem className="flex items-center gap-2 py-2 pr-4 rounded-none hover:bg-mintGreen hover:text-white">
+            <BellAlertIcon className="h-[18px] w-[18px]" />
             Notice
           </ListItem>
         </NavLink>
       </Typography>
       <NavListMenu />
-      <Typography
-        as="a"
-        href="#"
-        variant="small"
-        color="blue-gray"
-        className="font-normal"
-      >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <UserCircleIcon className="h-[18px] w-[18px]" />
-          Account
-        </ListItem>
-      </Typography>
+      
     </List>
   );
 }
@@ -214,28 +234,29 @@ export function NavbarWithMegaMenu() {
             className="mr-4 cursor-pointer py-1.5 lg:ml-2"
           >
             <div className="flex items-center">
-              <img
-                className="h-24 w-24 rounded-full object-fill object-center"
-                src={logo}
-                alt="logo"
-              />
-              <h1 className="text-xl text-redPrimary">Tarbiyah Ideal School</h1>
+              <Link to="/">
+                <img
+                  className="h-24 w-24 rounded-full object-fill object-center"
+                  src={logo}
+                  alt="logo"
+                />
+              </Link>
+              <h1 className="text-xl uppercase text-redPrimary">Tarbiyah Ideal School</h1>
             </div>
           </Typography>
           <div className="hidden lg:block">
             <NavList />
           </div>
           <div className="hidden gap-2 lg:flex">
-            <Link to='/contact'>
-            
-            <Button
-              size="lg"
-              variant="filled"
-              className="rounded-full text-white bg-redPrimary"
+            <Link to="/contact">
+              <Button
+                size="lg"
+                variant="filled"
+                className="rounded-none text-white bg-mintGreen"
               >
-              Contact
-            </Button>
-              </Link>
+                Contact
+              </Button>
+            </Link>
           </div>
           <IconButton
             variant="text"

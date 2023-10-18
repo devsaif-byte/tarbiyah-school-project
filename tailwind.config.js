@@ -6,7 +6,6 @@ export default withMT({
 	content: [
 		"./index.html",
 		"./src/**/*.{js,ts,jsx,tsx}",
-		"./node_modules/tw-elements/dist/js/**/*.js",
 		"path-to-your-node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
 		"path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
 	],
@@ -22,14 +21,13 @@ export default withMT({
 				redPrimary: "#BA131A",
 				bluePrimary: "#397BC2",
 				yellowPrimary: "#FAD008",
-				mintGreen: "#D0EBE4",
+				mintGreen: "#008C99",
 				orangePrimary: "#EA632C"
 			},
 		},
 	},
 	plugins: [
 		require("@tailwindcss/typography"),
-		require("tw-elements/dist/plugin.cjs"),
 	],
 	// darkMode: "class",
 });

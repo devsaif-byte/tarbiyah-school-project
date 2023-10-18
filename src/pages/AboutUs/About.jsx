@@ -1,13 +1,18 @@
 import React from "react";
 import { Fragment } from "react";
+import img1 from '../../images/pexels-akela-photography.jpg'
+import img2 from '../../images/pexels-cottonbro-studio.jpg'
+
+
+
 const About = () => {
 	return (
 		<>
 			{/* Container for demo purpose */}
-			<div className="container flex justify-center items-center md:px-6">
+			<div className="container flex justify-center items-center md:px-6 py-12">
 				{/* Section: Design Block */}
 				<section className="mb-32">
-					<h1 className="mb-4 text-3xl font-bold">আমাদের কথা</h1>
+					<h1 className="mb-4 text-3xl font-bold text-center">About Us</h1>
 					<p className="mb-6 flex items-center font-bold uppercase text-danger ">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +53,7 @@ const About = () => {
 						পক্ষ থেকে আপনাদেরকে জানাচ্ছি আন্তরিক প্রীতি ও শুভেচ্ছা।
 					</p>
 					<img
-						src="https://mdbcdn.b-cdn.net/img/new/slides/194.jpg"
+						src={img1}
 						className="mb-6 w-full"
 						alt=""
 					/>
@@ -82,16 +87,16 @@ const About = () => {
 						অঙ্গীকারাবদ্ধ।
 					</p>
 					{/*  */}
-					<div className="container my-24 mx-auto md:px-6">
+					<div className="container my-24 mx-auto ">
 						{/* Section: Design Block */}
 						<div className="mb-32">
 							<div className="block rounded-lg ">
 								<div className="flex flex-wrap items-center">
 									<div className="hidden shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
 										<img
-											src="https://images.unsplash.com/photo-1583920230213-bdd2d6e7bd50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+											src={img2}
 											alt="Trendy Pants and Shoes"
-											className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+											className="w-full lg:rounded-tr-none"
 										/>
 									</div>
 									<div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">

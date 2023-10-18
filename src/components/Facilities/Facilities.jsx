@@ -6,20 +6,18 @@ import moktobIcon from "../../images/yes.png";
 import abobIcon from "../../images/hotel-building.png";
 import dlscIcon from "../../images/school-material.png";
 import { HomeIcon } from "@heroicons/react/24/outline";
+import bg from '../../images/undraw_Educator.png'
 const Facilities = () => {
   return (
     <div
-      className="px-3 md:lg:xl:px-40 border-t border-b py-20 bg-opacity-10"
-      style={{
-        backgroundImage:
-          'url("https://www.toptal.com/designers/subtlepatterns/uploads/dot-grid.png")',
-      }}
+      className="px-3 md:lg:xl:px-40 py-20 bg-white"
+     
     >
       <h2 className="container mb-12 text-center text-3xl font-bold">
         Facilities
       </h2>
       <div className="grid grid-cols-1 md:lg:xl:grid-cols-3 group bg-white border ">
-        <div className="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
+        <div className="p-10 flex hover:bg-mintGreen hover:text-white transition-all ease-in-out flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
           <span className="p-5 rounded-full bg-rose-800 text-white">
 		  <img
               className="h-32 w-32 rounded-full object-cover object-center"
@@ -35,7 +33,7 @@ const Facilities = () => {
             of people.
           </p>
         </div>
-        <div className="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
+        <div className="p-10 flex hover:bg-mintGreen hover:text-white transition-all ease-in-out flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
           <span className="p-5 rounded-full bg-rose-800 text-white">
             <img
               className="h-32 w-32 rounded-full object-cover object-center"
@@ -50,7 +48,7 @@ const Facilities = () => {
             Know where you stand and what next to do to succeed .
           </p>
         </div>
-        <div className="p-10 flex flex-col items-center text-center group   md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
+        <div className="p-10 flex hover:bg-mintGreen hover:text-white transition-all ease-in-out flex-col items-center text-center group   md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
           <span className="p-5 rounded-full bg-rose-800 text-white">
            <img
               className="h-32 w-32 rounded-full object-cover object-center"
@@ -64,7 +62,7 @@ const Facilities = () => {
             institutions worldwide.
           </p>
         </div>
-        <div className="p-10 flex flex-col items-center text-center group   md:lg:xl:border-r hover:bg-slate-50 cursor-pointer">
+        <div className="p-10 flex hover:bg-mintGreen hover:text-white transition-all ease-in-out flex-col items-center text-center group   md:lg:xl:border-r hover:bg-slate-50 cursor-pointer">
           <span className="p-5 rounded-full bg-rose-800 text-white">
 		  <img
               className="h-32 w-32 rounded-full object-cover object-center"
@@ -79,7 +77,7 @@ const Facilities = () => {
             Yet another year ! Yet another jewel in our crown!
           </p>
         </div>
-        <div className="p-10 flex flex-col items-center text-center group    md:lg:xl:border-r hover:bg-slate-50 cursor-pointer">
+        <div className="p-10 flex hover:bg-mintGreen hover:text-white transition-all ease-in-out flex-col items-center text-center group    md:lg:xl:border-r hover:bg-slate-50 cursor-pointer">
           <span className="p-5 rounded-full bg-rose-800 text-white">
 		  <img
               className="h-32 w-32 rounded-full object-cover object-center"
@@ -95,7 +93,7 @@ const Facilities = () => {
             preparation.
           </p>
         </div>
-        <div className="p-10 flex flex-col items-center text-center group     hover:bg-slate-50 cursor-pointer">
+        <div className="p-10 flex hover:bg-mintGreen hover:text-white transition-all ease-in-out flex-col items-center text-center group     hover:bg-slate-50 cursor-pointer">
           <span className="p-5 rounded-full bg-rose-800 text-white">
 		  <img
               className="h-32 w-32 rounded-full object-cover object-center"
@@ -114,14 +112,14 @@ const Facilities = () => {
       <div className="w-full   bg-rose-800 py-10 px-20 flex justify-between items-center">
         <p className=" text-white">
           {" "}
-          <span className="text-4xl font-medium">
+          <span className="text-4xl font-medium text-orangePrimary">
             Still Confused ?
           </span> <br />{" "}
           <span className="text-lg">
             Book For Free Career Consultation Today !{" "}
           </span>
         </p>
-        <button className="px-5 py-3  font-medium text-white hover:bg-green-500 duration-150  bg-green-400">
+        <button className="px-5 py-3  font-medium text-white hover:bg-teal-500 duration-150  bg-mintGreen">
           Learn More{" "}
         </button>
       </div>

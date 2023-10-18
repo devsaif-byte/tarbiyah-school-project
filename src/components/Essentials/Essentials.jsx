@@ -1,12 +1,14 @@
 import React from "react";
-import RedButton from "../Buttons/RedButton";
 import { Button } from "@material-tailwind/react";
-
+import baby from '../../images/baby.jpg'
+import admission from '../../images/advice.jpg'
+import others from '../../images/abc.jpg'
+import { Link } from "react-router-dom";
 const Essentials = () => {
 	return (
 		<>
 			{/* Container for demo purpose */}
-			<div className="py-24 mx-auto md:px-6 bg-mintGreen">
+			<div className="py-24 mx-auto md:px-6 bg-gray-100">
 				{/* Section: Design Block */}
 				<section className="container text-center">
 					<h2 className="mb-12 text-center text-3xl font-bold">Essentials</h2>
@@ -18,7 +20,7 @@ const Essentials = () => {
 								data-te-ripple-color="light"
 							>
 								<img
-									src="https://mdbcdn.b-cdn.net/img/new/standard/city/018.jpg"
+									src={baby}
 									className="w-full"
 									alt="Louvre"
 								/>
@@ -28,9 +30,12 @@ const Essentials = () => {
 							<p className="text-neutral-500 mb-6">
 								Ut pretium ultricies dignissim. Sed sit amet mi eget urna
 								placerat vulputate. Ut vulputate est non quam dignissim
-								elementum. Donec a ullamcorper diam.
+								elementum.
 							</p>
-							<Button children="Learn More" to="/academic-schedule" />
+							<Link to="/academic-schedule">
+							
+							<Button className="rounded-none bg-mintGreen" size="md"  children="Learn More" />
+							</Link>
 						</div>
 						<div className="mb-6 lg:mb-0">
 							<div
@@ -39,7 +44,7 @@ const Essentials = () => {
 								data-te-ripple-color="light"
 							>
 								<img
-									src="https://mdbcdn.b-cdn.net/img/new/standard/city/032.jpg"
+									src={admission}
 									className="w-full"
 									alt="Louvre"
 								/>
@@ -51,7 +56,10 @@ const Essentials = () => {
 								orci, nec ornare metus semper sed. Integer volutpat ornare erat
 								sit amet rutrum.
 							</p>
-							<Button children="Learn More" to="/admission-procedure" />
+							<Link to="/admission-procedure">
+							
+							<Button  className="rounded-none bg-mintGreen" size="md"  children="Learn More"/>
+							</Link>
 						</div>
 						<div className="mb-0">
 							<div>
@@ -61,7 +69,7 @@ const Essentials = () => {
 									data-te-ripple-color="light"
 								>
 									<img
-										src="https://mdbcdn.b-cdn.net/img/new/standard/city/059.jpg"
+										src={others}
 										className="w-full"
 										alt="Louvre"
 									/>
@@ -73,7 +81,7 @@ const Essentials = () => {
 									arcu, non vehicula nisl dui quis diam. Mauris ut risus eget
 									massa volutpat feugiat. Donec.
 								</p>
-								<Button children="Learn More"  />
+								<Button className="rounded-none bg-mintGreen" size="md"  children="Learn More"  />
 							</div>
 						</div>
 					</div>

@@ -13,16 +13,18 @@ import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import { NavbarWithMegaMenu } from "./components/Nav/Navbar";
 import { AddressNav } from "./components/Nav/AdressNav";
 import { FooterWithLogo } from "./components/Footer/Footer";
+import Wellcome from "./pages/Wellcome/Wellcome";
 function App() {
   return (
     <>
-      <main className="App leading-relaxed bg-mintGreen text-left">
+      <main className="App leading-relaxed text-left min-h-screen">
         <BrowserRouter>
           {/* <Navbar /> */}
           <AddressNav />
           <NavbarWithMegaMenu />
           <Routes>
             <Route path="/" element={<Layout />} />
+            <Route path="/wellcome" element={<Wellcome />} />
             <Route path="/about" element={<About />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/notice" element={<Notice />} />
