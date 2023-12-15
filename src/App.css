@@ -1,5 +1,5 @@
 .App {
 	margin: 0 auto;
-	text-align: center;
-	
+	text-align: start;
+	user-select: none;
 }

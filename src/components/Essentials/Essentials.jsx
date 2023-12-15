@@ -1,9 +1,10 @@
 import React from "react";
 import { Button } from "@material-tailwind/react";
-import baby from '../../images/baby.jpg'
-import admission from '../../images/advice.jpg'
-import others from '../../images/abc.jpg'
+import baby from "../../images/baby.jpg";
+import admission from "../../images/advice.jpg";
+import others from "../../images/abc.jpg";
 import { Link } from "react-router-dom";
+import Title from "../Title/Title";
 const Essentials = () => {
 	return (
 		<>
@@ -11,7 +12,7 @@ const Essentials = () => {
 			<div className="py-24 mx-auto md:px-6 bg-gray-100">
 				{/* Section: Design Block */}
 				<section className="container text-center">
-					<h2 className="mb-12 text-center text-3xl font-bold">Essentials</h2>
+					<Title text="Essential" />
 					<div className="grid gap-6 lg:grid-cols-3 xl:gap-x-12">
 						<div className="mb-6 lg:mb-0">
 							<div
@@ -19,11 +20,7 @@ const Essentials = () => {
 								data-te-ripple-init=""
 								data-te-ripple-color="light"
 							>
-								<img
-									src={baby}
-									className="w-full"
-									alt="Louvre"
-								/>
+								<img src={baby} className="w-full" alt="Louvre" />
 							</div>
 							<h5 className="mb-3 text-lg font-bold">একাডেমিক শিডিউল</h5>
 
@@ -33,8 +30,11 @@ const Essentials = () => {
 								elementum.
 							</p>
 							<Link to="/academic-schedule">
-							
-							<Button className="rounded-none bg-mintGreen" size="md"  children="Learn More" />
+								<Button
+									className="rounded-none bg-mintGreen"
+									size="md"
+									children="Learn More"
+								/>
 							</Link>
 						</div>
 						<div className="mb-6 lg:mb-0">
@@ -43,11 +43,7 @@ const Essentials = () => {
 								data-te-ripple-init=""
 								data-te-ripple-color="light"
 							>
-								<img
-									src={admission}
-									className="w-full"
-									alt="Louvre"
-								/>
+								<img src={admission} className="w-full" alt="Louvre" />
 							</div>
 							<h5 className="mb-3 text-lg font-bold">ভর্তি প্রক্রিয়া</h5>
 
@@ -57,8 +53,11 @@ const Essentials = () => {
 								sit amet rutrum.
 							</p>
 							<Link to="/admission-procedure">
-							
-							<Button  className="rounded-none bg-mintGreen" size="md"  children="Learn More"/>
+								<Button
+									className="rounded-none bg-mintGreen"
+									size="md"
+									children="Learn More"
+								/>
 							</Link>
 						</div>
 						<div className="mb-0">
@@ -68,11 +67,7 @@ const Essentials = () => {
 									data-te-ripple-init=""
 									data-te-ripple-color="light"
 								>
-									<img
-										src={others}
-										className="w-full"
-										alt="Louvre"
-									/>
+									<img src={others} className="w-full" alt="Louvre" />
 								</div>
 								<h5 className="mb-3 text-lg font-bold">অন্যান্য</h5>
 
@@ -81,7 +76,11 @@ const Essentials = () => {
 									arcu, non vehicula nisl dui quis diam. Mauris ut risus eget
 									massa volutpat feugiat. Donec.
 								</p>
-								<Button className="rounded-none bg-mintGreen" size="md"  children="Learn More"  />
+								<Button
+									className="rounded-none bg-mintGreen"
+									size="md"
+									children="Learn More"
+								/>
 							</div>
 						</div>
 					</div>

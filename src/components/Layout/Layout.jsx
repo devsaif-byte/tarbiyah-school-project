@@ -3,7 +3,7 @@ import Hero from "../Hero/Hero";
 import Facilities from "../Facilities/Facilities";
 import Essentials from "../Essentials/Essentials";
 import Contact from "../Contact/Contact";
-import { ProfileCard } from "../Staffs/Profile";
+import Staffs from "../Staffs/Staffs";
 const Layout = () => {
 	return (
 		<section className="container-md mx-auto grid grid-rows-1 gap-0 justify-center">
@@ -12,7 +12,7 @@ const Layout = () => {
 					<Hero />
 					<Facilities />
 					<Essentials />
-					<ProfileCard/>
+					<Staffs />
 					<Contact />
 				</div>
 			</div>

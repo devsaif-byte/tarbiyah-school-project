@@ -1,5 +1,6 @@
 import React from "react";
-import feeSt from '../../images/fee-st.png'
+import feeSt from "../../images/fee-st.png";
+import Title from "../../components/Title/Title";
 const AdmissionProc = () => {
 	return (
 		<>
@@ -7,7 +8,8 @@ const AdmissionProc = () => {
 			<div className="container my-24 text-left md:px-6 px-6">
 				{/* Section: Design Block */}
 				<section className="mb-32">
-					<h1 className="mb-4 text-3xl font-bold">ভর্তি প্রক্রিয়া</h1>
+					<Title text="ভর্তি প্রক্রিয়া" />
+
 					<p className="mb-6 flex items-center font-bold uppercase text-danger ">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"

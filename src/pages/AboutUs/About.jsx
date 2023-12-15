@@ -1,10 +1,8 @@
 import React from "react";
 import { Fragment } from "react";
-import img1 from '../../images/pexels-akela-photography.jpg'
-import img2 from '../../images/pexels-cottonbro-studio.jpg'
-
-
-
+import Title from "../../components/Title/Title";
+import img1 from "../../images/pexels-akela-photography.jpg";
+import img2 from "../../images/quran.jpg";
 const About = () => {
 	return (
 		<>
@@ -12,7 +10,7 @@ const About = () => {
 			<div className="container flex justify-center items-center md:px-6 py-12">
 				{/* Section: Design Block */}
 				<section className="mb-32">
-					<h1 className="mb-4 text-3xl font-bold text-center">About Us</h1>
+					<Title text="About Us" />
 					<p className="mb-6 flex items-center font-bold uppercase text-danger ">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -52,12 +50,8 @@ const About = () => {
 						আমাদের জন্য রহমত এবং উসওয়াতুন হাসানাহ। ‘তারবিয়াহ আইডিয়াল স্কুল’ এর
 						পক্ষ থেকে আপনাদেরকে জানাচ্ছি আন্তরিক প্রীতি ও শুভেচ্ছা।
 					</p>
-					<img
-						src={img1}
-						className="mb-6 w-full"
-						alt=""
-					/>
-					
+					<img src={img1} className="mb-6 w-full" alt="" />
+
 					<p>
 						আপনারা জেনে আনন্দিত হবেন যে, আপনার সন্তানের যথাযথ বিকাশ ও শিক্ষা
 						প্রদানের নিমিত্তে প্রতিষ্ঠিত হয়েছে ভিন্ন ধারার শিক্ষা প্রতিষ্ঠান
@@ -95,7 +89,7 @@ const About = () => {
 									<div className="hidden shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
 										<img
 											src={img2}
-											alt="Trendy Pants and Shoes"
+											alt="There is an image"
 											className="w-full lg:rounded-tr-none"
 										/>
 									</div>
