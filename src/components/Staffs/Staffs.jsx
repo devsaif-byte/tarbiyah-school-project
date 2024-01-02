@@ -8,7 +8,7 @@ import Title from "../Title/Title";
 const Staffs = () => {
 	return (
 		<section className="container py-12 ">
-			<Title text="Our Staffs" />
+			<Title text="Our Advisor's" />
 			<div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
 				<Profile
 					image={motiul}

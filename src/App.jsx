@@ -13,7 +13,7 @@ import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import { NavbarWithMegaMenu } from "./components/Nav/Navbar";
 import { AddressNav } from "./components/Nav/AdressNav";
 import { FooterWithLogo } from "./components/Footer/Footer";
-import Wellcome from "./pages/Wellcome/Wellcome";
+import Welcome from "./pages/Welcome/Welcome";
 import NoCopyText from "./contexts/NoCopyText";
 
 // const url =
@@ -36,7 +36,7 @@ function App() {
 					<NavbarWithMegaMenu />
 					<Routes>
 						<Route path="/" element={<Layout />} />
-						<Route path="/wellcome" element={<Wellcome />} />
+						<Route path="/welcome" element={<Welcome />} />
 						<Route
 							path="/about"
 							element={

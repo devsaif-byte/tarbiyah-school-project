@@ -24,10 +24,9 @@ const Essentials = () => {
 							</div>
 							<h5 className="mb-3 text-lg font-bold">একাডেমিক শিডিউল</h5>
 
-							<p className="text-neutral-500 mb-6">
-								Ut pretium ultricies dignissim. Sed sit amet mi eget urna
-								placerat vulputate. Ut vulputate est non quam dignissim
-								elementum.
+							<p className="text-neutral-500 mb-6 text-justify">
+								একাডেমিক শিডিউল এবং ভর্তির ক্ষেত্রে শ্রেণীবিন্যাস বিস্তারিত
+								দেখতে ক্লিক করুন।
 							</p>
 							<Link to="/academic-schedule">
 								<Button
@@ -47,10 +46,8 @@ const Essentials = () => {
 							</div>
 							<h5 className="mb-3 text-lg font-bold">ভর্তি প্রক্রিয়া</h5>
 
-							<p className="text-neutral-500  mb-6">
-								Suspendisse in volutpat massa. Nulla facilisi. Sed aliquet diam
-								orci, nec ornare metus semper sed. Integer volutpat ornare erat
-								sit amet rutrum.
+							<p className="text-neutral-500  mb-6 text-justify">
+								ভর্তি প্রক্রিয়ার বিস্তারিত দেখতে ক্লিক করুন।
 							</p>
 							<Link to="/admission-procedure">
 								<Button
@@ -71,10 +68,8 @@ const Essentials = () => {
 								</div>
 								<h5 className="mb-3 text-lg font-bold">অন্যান্য</h5>
 
-								<p className="text-neutral-500  mb-6">
-									Curabitur tristique, mi a mollis sagittis, metus felis mattis
-									arcu, non vehicula nisl dui quis diam. Mauris ut risus eget
-									massa volutpat feugiat. Donec.
+								<p className="text-neutral-500  mb-6 text-justify">
+									অন্যান্য বিস্তারিত দেখতে ক্লিক করুন।
 								</p>
 								<Button
 									className="rounded-none bg-mintGreen"
