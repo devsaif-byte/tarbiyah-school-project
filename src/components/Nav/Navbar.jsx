@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
 	Navbar,
 	Collapse,
@@ -11,23 +12,14 @@ import {
 	MenuHandler,
 	MenuList,
 	MenuItem,
-	Chip,
 } from "@material-tailwind/react";
 import {
 	ChevronDownIcon,
-	UserCircleIcon,
-	CubeTransparentIcon,
 	Bars3Icon,
 	XMarkIcon,
 	FlagIcon,
-	ChatBubbleOvalLeftIcon,
 	UsersIcon,
 	FolderIcon,
-	Square3Stack3DIcon,
-	RocketLaunchIcon,
-	FaceSmileIcon,
-	PuzzlePieceIcon,
-	GiftIcon,
 	HomeIcon,
 	AcademicCapIcon,
 	BellAlertIcon,
@@ -66,25 +58,7 @@ const navListMenuItems = [
 		icon: PhotoIcon,
 		title: "Photo Gallery",
 		link: "/gallery",
-		description: "Checkout our products that helps a startup running.",
-	},
-	{
-		color: "teal",
-		icon: FaceSmileIcon,
-		title: "Icons",
-		description: "Set of beautiful icons that you can use in your project.",
-	},
-	{
-		color: "cyan",
-		icon: PuzzlePieceIcon,
-		title: "UI Kits",
-		description: "High quality UI Kits helps you to 2x faster.",
-	},
-	{
-		color: "pink",
-		icon: GiftIcon,
-		title: "Open Source",
-		description: "List of all our open-source projects, it's all free.",
+		description: "See photos of ours.",
 	},
 ];
 
@@ -169,7 +143,7 @@ function NavList() {
 				// color="blue-gray"
 				className="font-normal rounded-none "
 			>
-				<NavLink to="/welcome">
+				<NavLink to="/">
 					<ListItem className="flex items-center gap-2 py-2 pr-4 rounded-none hover:bg-mintGreen hover:text-white">
 						<HomeIcon className="h-[18px] w-[18px]" />
 						Home
@@ -222,7 +196,12 @@ export function NavbarWithMegaMenu() {
 	return (
 		<div className="bg-white">
 			<Navbar className="mx-auto px-4 p-0 rounded-none shadow-none backdrop-saturate-none backdrop-blur-none bg-opacity-80 border-none">
-				<div className="flex items-center justify-between text-blue-gray-900">
+				<motion.div
+					initial={{ y: -100, opacity: 0 }}
+					animate={{ y: 0, opacity: 1 }}
+					transition={{ duration: 1 }}
+					className="flex items-center justify-between text-blue-gray-900"
+				>
 					<Typography
 						as="a"
 						href="#"
@@ -268,7 +247,7 @@ export function NavbarWithMegaMenu() {
 							<Bars3Icon className="h-6 w-6" strokeWidth={2} />
 						)}
 					</IconButton>
-				</div>
+				</motion.div>
 				<Collapse open={openNav}>
 					<NavList />
 					<div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">

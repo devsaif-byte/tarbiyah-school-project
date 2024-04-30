@@ -10,12 +10,12 @@ const carouselImages = [caroImg1, caroImg2, caroImg3, caroImg4, caroImg5];
 export function CarouselCustomNavigation() {
 	return (
 		<Carousel
-			className="rounded-none bg-[hsla(0,0%,0%,0.25)] "
+			className="rounded-none z-40"
 			loop="true"
 			autoplay="true"
 			autoplayDelay={5000}
 			navigation={({ setActiveIndex, activeIndex, length }) => (
-				<div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+				<div className="absolute bottom-4 left-2/4 flex -translate-x-2/4 gap-2 z-40">
 					{new Array(length).fill("").map((_, i) => (
 						<span
 							key={i}
