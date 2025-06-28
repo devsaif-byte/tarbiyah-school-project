@@ -1,11 +1,19 @@
 import { Carousel } from "@material-tailwind/react";
-import caroImg1 from "../../images/img-caro1.jpg";
-import caroImg2 from "../../images/img-caro2.jpg";
-import caroImg3 from "../../images/img-caro3.jpg";
-import caroImg4 from "../../images/img-caro4.jpg";
-import caroImg5 from "../../images/img-caro5.jpg";
+import caroImg1 from "../../images/carousel/img-caro1.jpg";
+import caroImg2 from "../../images/carousel/img-caro2.jpg";
+import caroImg3 from "../../images/carousel/img-caro3.jpg";
+import caroImg4 from "../../images/carousel/img-caro4.jpg";
+import caroImg5 from "../../images/carousel/img-caro5.jpg";
+import caroImg6 from "../../images/carousel/img-caro6.jpeg";
 
-const carouselImages = [caroImg1, caroImg2, caroImg3, caroImg4, caroImg5];
+const carouselImages = [
+	caroImg1,
+	caroImg2,
+	caroImg3,
+	caroImg4,
+	caroImg5,
+	caroImg6,
+];
 
 export function CarouselCustomNavigation() {
 	return (

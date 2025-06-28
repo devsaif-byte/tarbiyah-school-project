@@ -17,8 +17,8 @@ export function Profile({ image, name, title, description }) {
 			</CardHeader>
 
 			<CardBody className="overflow-visible py-2 flex flex-col gap-3">
-				<p className="text-tiny uppercase font-bold">{title}</p>
 				<h4 className="font-bold text-large">{name}</h4>
+				<p className="text-tiny uppercase font-bold">{title}</p>
 				<small className="text-default-500">{description}</small>
 			</CardBody>
 		</Card>

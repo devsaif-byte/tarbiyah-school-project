@@ -1,5 +1,5 @@
 import React from "react";
-import baby from "../../images/baby.jpg";
+import { img26, img76 } from "../../images/gallery";
 import admission from "../../images/advice.jpg";
 import others from "../../images/abc.jpg";
 import { Link } from "react-router-dom";
@@ -16,7 +16,7 @@ import {
 
 const cardData = [
 	{
-		image: baby,
+		image: img76,
 		title: "একাডেমিক শিডিউল",
 		description:
 			"একাডেমিক শিডিউল এবং ভর্তির ক্ষেত্রে শ্রেণীবিন্যাস বিস্তারিত দেখতে ক্লিক করুন।",
@@ -29,7 +29,7 @@ const cardData = [
 		route: "/admission-procedure",
 	},
 	{
-		image: others,
+		image: img26,
 		title: "অন্যান্য",
 		description: "অন্যান্য বিস্তারিত দেখতে ক্লিক করুন।",
 		route: "",

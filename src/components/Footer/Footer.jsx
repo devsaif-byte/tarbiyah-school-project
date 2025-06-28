@@ -29,13 +29,12 @@ export function FooterWithLogo() {
 							</span>
 						</a>
 						<div className="mt-4 lg:max-w-sm">
+							<h2 className="text-gray-50 font-bold mb-3">Address</h2>
 							<p className="text-sm text-gray-50">
-								Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-								accusantium doloremque laudantium, totam rem aperiam.
+								House 13, Block-B, Main Road
 							</p>
 							<p className="mt-4 text-sm text-gray-50">
-								Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-								beatae vitae dicta sunt explicabo.
+								Dakkhin Banasree, Khilgaon, Dhaka-1219
 							</p>
 						</div>
 					</div>

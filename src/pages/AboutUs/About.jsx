@@ -1,8 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
 import Title from "../../components/Title/Title";
-import img1 from "../../images/pexels-akela-photography.jpg";
-import img2 from "../../images/quran.jpg";
+import { img21, img20 } from "../../images/gallery";
 const About = () => {
 	return (
 		<>
@@ -50,7 +49,7 @@ const About = () => {
 						আমাদের জন্য রহমত এবং উসওয়াতুন হাসানাহ। ‘তারবিয়াহ আইডিয়াল স্কুল’ এর
 						পক্ষ থেকে আপনাদেরকে জানাচ্ছি আন্তরিক প্রীতি ও শুভেচ্ছা।
 					</p>
-					<img src={img1} className="mb-6 w-full" alt="" />
+					<img src={img20} className="mb-6 w-full" alt="" />
 
 					<p>
 						আপনারা জেনে আনন্দিত হবেন যে, আপনার সন্তানের যথাযথ বিকাশ ও শিক্ষা
@@ -88,7 +87,7 @@ const About = () => {
 								<div className="flex flex-wrap items-center">
 									<div className="hidden shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
 										<img
-											src={img2}
+											src={img21}
 											alt="There is an image"
 											className="w-full lg:rounded-tr-none"
 										/>

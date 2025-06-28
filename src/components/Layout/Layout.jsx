@@ -4,6 +4,8 @@ import Facilities from "../Facilities/Facilities";
 import Essentials from "../Essentials/Essentials";
 import Contact from "../Contact/Contact";
 import Staffs from "../Staffs/Staffs";
+import Gallery from "../../pages/Gallery/Gallery";
+import YoutubePlayer from "../Videos/YoutubePlayer";
 // import Testimonial from "../Testimonial/Testimonial";
 const Layout = () => {
 	return (
@@ -14,6 +16,8 @@ const Layout = () => {
 					<Facilities />
 					<Essentials />
 					<Staffs />
+					<YoutubePlayer />
+					<Gallery photoLimit={10} onSeeMore={true} />
 					{/* <Testimonial /> */}
 					<Contact />
 				</div>

@@ -1,29 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Button } from "@material-tailwind/react";
 import { data } from "../../db.json";
 import { CarouselCustomNavigation } from "./Carousel";
 const { title, subtitle } = data[0].heroContent;
 import { motion } from "framer-motion";
 const Hero = () => {
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+	// const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-	useEffect(() => {
-		const handleResize = () => {
-			setWindowWidth(window.innerWidth);
-		};
+	// useEffect(() => {
+	// 	const handleResize = () => {
+	// 		setWindowWidth(window.innerWidth);
+	// 	};
 
-		window.addEventListener("resize", handleResize);
+	// 	window.addEventListener("resize", handleResize);
 
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, []);
+	// 	return () => {
+	// 		window.removeEventListener("resize", handleResize);
+	// 	};
+	// }, []);
 	return (
 		<>
 			{/* Hero Area Start */}
 			<section className="h-[800px] background-radial-gradient text-center lg:text-left">
 				<div className="relative overflow-hidden bg-cover bg-no-repeat bg-[50%] h-full w-full">
-					{windowWidth > 768 && <CarouselCustomNavigation />}
+					{/* {windowWidth > 768 && <CarouselCustomNavigation />} */}
+					{<CarouselCustomNavigation />}
 					<div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.45)] bg-fixed">
 						<div className="flex h-full items-center justify-center">
 							<motion.div
